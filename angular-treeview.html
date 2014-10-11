@@ -1,0 +1,14 @@
+<ul>
+  <li ng-repeat="branch in branches">
+    <span class="tree-label" ng-click="select(branch)" ng-dblclick="branch.expand = !branch.expand">
+      <i class="glyphicon"
+        ng-class="{
+          'glyphicon-file':isFile(branch),
+          'glyphicon-folder-open':isOpenFolder(branch),
+          'glyphicon-folder-close':isClosedFolder(branch)
+        }"></i>
+      <label ng-class="{'selected-tree-item':isSelected(branch)}">{{branch.label}}</label>
+    </span>
+    <tree branches="branch.children" ng-show="branch.expand"></tree>
+  </li>
+</ul>

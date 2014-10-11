@@ -1,0 +1,17 @@
+tree ul { list-style: none; }
+tree li {
+  display: block !important;
+  margin-left: 0;
+  position: relative;
+  left: -1.25em;
+}
+.tree-label, .tree-label i, .tree-label label {
+  cursor: pointer;
+  font-weight: 400;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+tree label.selected {
+  background: #DDD;
+  font-weight: 700;
+}
